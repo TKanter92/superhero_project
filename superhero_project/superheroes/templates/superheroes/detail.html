@@ -33,8 +33,13 @@
             <td align="center"><h3> Catch Phrase: </h3></td>
             <td align="center"><h3> {{single_hero.catch_phrase}} </h3></td>
         </tr>
+    </table>
+        
+        <h4 align="center"><a href="{% url 'superheroes:edit' single_hero.id %}">Edit</a></h4>
+        <h4 align="center"><a href="{% url 'superheroes:remove' single_hero.id %}">Remove</a></h4>
+        
 
-    </ul>
+
 
 
 </body>

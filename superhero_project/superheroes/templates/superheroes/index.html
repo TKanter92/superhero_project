@@ -6,14 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Superhero Index</title>
 </head>
+<style>
+    table, th, td {
+        border: 1px solid black;
+    }
+</style>
 <body>
-    <h1>List of Heroes</h1>
-    <ul>
+  
+    <h1 align="center">List of Heroes</h1>
+    <table style="width: 25%" align="center">
         {% for hero in all_heroes %}
-        <li><h2> {{hero.name}} - <a href="{% url 'superheroes:detail' hero.id %}">Details</a></h2> </li>
+        <tr>
+        <td align="center"><h2> {{hero.name}} </h2></td>
+        <td align="center"><h2> <a href="{% url 'superheroes:detail' hero.id %}">Details</a></h2></td>
+        </tr>
         {% endfor %}
-
-    </ul>
-    <a href="{% url 'superheroes:create' %}">Add New Hero</a>
+    </table>
+    <h2 align="center"><a href="{% url 'superheroes:create' %}">Add New Hero</a></h2>
 </body>
 </html>
