@@ -12,7 +12,8 @@
     }
 </style>
 <body>
-  
+{% load static %}
+<img src = "{% static 'batman.jpg' %}" alt = "batman" width="500" height="750" style="float:left">
     <h1 align="center">List of Heroes</h1>
     <table style="width: 25%" align="center">
         {% for hero in all_heroes %}
